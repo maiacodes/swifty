@@ -34,7 +34,7 @@ import Foundation
         }
         
         // If messages doesn't begin with prefix then ignore it
-        guard msg.content.starts(with: prefix) else {
+        guard msg.content.hasPrefix(prefix) else {
             return
         }
         
