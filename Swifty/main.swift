@@ -12,7 +12,7 @@ let regex = try! NSRegularExpression(pattern: "(www|http:|https:)+[^\\s]+[\\w]")
 
 let bot = Sword(token: ProcessInfo.processInfo.environment["TOKEN"]!)
 
-bot.editStatus(to: "online", playing: "")
+bot.editStatus(to: "online", playing: "say .help")
 
 bot.on(.messageCreate) { data in
     let msg = data as! Message
