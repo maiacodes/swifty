@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125ABA312529DCB8003813DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA302529DCB8003813DD /* main.swift */; };
+		125ABA312529DCB8003813DD /* SwiftyBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA302529DCB8003813DD /* SwiftyBot.swift */; };
 		125ABA3F2529E046003813DD /* Sword in Frameworks */ = {isa = PBXBuildFile; productRef = 125ABA3E2529E046003813DD /* Sword */; };
-		125ABA432529F6AB003813DD /* commandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA422529F6AA003813DD /* commandHandler.swift */; };
-		125ABA472529FC16003813DD /* help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA462529FC16003813DD /* help.swift */; };
-		12A48149252A0AA2002B1C0B /* giveaway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A48148252A0AA2002B1C0B /* giveaway.swift */; };
-		12A4814C252A15C6002B1C0B /* poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A4814B252A15C6002B1C0B /* poll.swift */; };
+		125ABA432529F6AB003813DD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA422529F6AA003813DD /* Command.swift */; };
+		125ABA472529FC16003813DD /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125ABA462529FC16003813DD /* HelpCommand.swift */; };
+		12A4814C252A15C6002B1C0B /* PollCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A4814B252A15C6002B1C0B /* PollCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,11 +28,10 @@
 
 /* Begin PBXFileReference section */
 		125ABA2D2529DCB8003813DD /* Swifty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swifty; sourceTree = BUILT_PRODUCTS_DIR; };
-		125ABA302529DCB8003813DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		125ABA422529F6AA003813DD /* commandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commandHandler.swift; sourceTree = "<group>"; };
-		125ABA462529FC16003813DD /* help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = help.swift; sourceTree = "<group>"; };
-		12A48148252A0AA2002B1C0B /* giveaway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giveaway.swift; sourceTree = "<group>"; };
-		12A4814B252A15C6002B1C0B /* poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poll.swift; sourceTree = "<group>"; };
+		125ABA302529DCB8003813DD /* SwiftyBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBot.swift; sourceTree = "<group>"; };
+		125ABA422529F6AA003813DD /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		125ABA462529FC16003813DD /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		12A4814B252A15C6002B1C0B /* PollCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				125ABA452529FC0A003813DD /* commands */,
-				125ABA302529DCB8003813DD /* main.swift */,
-				125ABA422529F6AA003813DD /* commandHandler.swift */,
+				125ABA302529DCB8003813DD /* SwiftyBot.swift */,
+				125ABA422529F6AA003813DD /* Command.swift */,
 			);
 			path = Swifty;
 			sourceTree = "<group>";
@@ -77,9 +75,8 @@
 		125ABA452529FC0A003813DD /* commands */ = {
 			isa = PBXGroup;
 			children = (
-				125ABA462529FC16003813DD /* help.swift */,
-				12A48148252A0AA2002B1C0B /* giveaway.swift */,
-				12A4814B252A15C6002B1C0B /* poll.swift */,
+				125ABA462529FC16003813DD /* HelpCommand.swift */,
+				12A4814B252A15C6002B1C0B /* PollCommand.swift */,
 			);
 			path = commands;
 			sourceTree = "<group>";
@@ -91,8 +88,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 125ABA342529DCB8003813DD /* Build configuration list for PBXNativeTarget "Swifty" */;
 			buildPhases = (
-				125ABA292529DCB8003813DD /* Sources */,
 				125ABA2A2529DCB8003813DD /* Frameworks */,
+				125ABA292529DCB8003813DD /* Sources */,
 				125ABA2B2529DCB8003813DD /* CopyFiles */,
 			);
 			buildRules = (
@@ -147,11 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125ABA432529F6AB003813DD /* commandHandler.swift in Sources */,
-				12A4814C252A15C6002B1C0B /* poll.swift in Sources */,
-				125ABA312529DCB8003813DD /* main.swift in Sources */,
-				12A48149252A0AA2002B1C0B /* giveaway.swift in Sources */,
-				125ABA472529FC16003813DD /* help.swift in Sources */,
+				125ABA432529F6AB003813DD /* Command.swift in Sources */,
+				12A4814C252A15C6002B1C0B /* PollCommand.swift in Sources */,
+				125ABA312529DCB8003813DD /* SwiftyBot.swift in Sources */,
+				125ABA472529FC16003813DD /* HelpCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
