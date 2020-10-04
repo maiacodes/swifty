@@ -7,8 +7,8 @@
 
 import Sword
 
-func helpCommand(msg: Message) {
+func helpRoute(msg: Message, args: Array<Substring>) {
     msg.reply(with: "Swifty is an open-source utility bot written in Swift.")
 }
 
-let helpCMD = Command(name: "help", trigger: "help", route: helpCommand)
+let helpCMD = Command(name: "help", trigger: "help", route: helpRoute)

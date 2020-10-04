@@ -11,13 +11,15 @@ import Foundation
 struct Command {
     var name: String
     var trigger: String
-    var route: (Message) -> Void
+    var route: (Message, Array<Substring>) -> Void
     
 }
 
+var cooldowns = [Snowflake : Date]()
+
 let prefix = "."
 
-let commands = [helpCMD]
+let commands = [helpCMD, pollCMD]
 
 func messageCreate(msg: Message) {
     // Ignore bot messages
@@ -34,8 +36,22 @@ func messageCreate(msg: Message) {
     // Find route and run it
     for cmd in commands {
         if request == cmd.trigger || request.starts(with: "\(cmd.trigger) ") {
-            cmd.route(msg)
+            if isUserOnCooldown(id: msg.author!.id) {return}
+            
+            let args = request.split(separator: " ")
+            cooldowns[(msg.author?.id)!] = msg.timestamp
+            cmd.route(msg, args)
         }
     }
 }
 
+func isUserOnCooldown(id: Snowflake)->Bool {
+    // Check for cooldown
+    let cooldown = cooldowns[id]?.timeIntervalSinceNow
+    if cooldown != nil {
+        if Int(cooldown!) > -1 {
+            return true
+        }
+    }
+    return false
+}
