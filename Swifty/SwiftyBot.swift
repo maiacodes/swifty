@@ -29,7 +29,7 @@ import Foundation
     func messageCreate(msg: Message) {
         // Ignore bot and webhook messages
         guard let author = msg.author,
-              author.isBot == false else {
+              author.isBot != true else {
             return
         }
         
