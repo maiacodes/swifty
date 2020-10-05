@@ -14,6 +14,7 @@ import Foundation
     let bot: Sword
     
     var cooldowns: [Snowflake : Date] = [:]
+    var color = 16762655
     let prefix = "."
     let commands: [Command] = [.help, .poll, .user]
     
