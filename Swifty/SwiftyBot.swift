@@ -13,7 +13,7 @@ import Foundation
     
     var cooldowns: [Snowflake : Date] = [:]
     let prefix = "."
-    let commands: [Command] = [.help, .poll]
+    let commands: [Command] = [.help, .poll, .user]
     
     init() {
         bot = Sword(token: ProcessInfo.processInfo.environment["TOKEN"]!)
