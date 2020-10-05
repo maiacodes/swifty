@@ -9,6 +9,8 @@ import Sword
 import Foundation
 
 @main class SwiftyBot {
+    static let shared = SwiftyBot()
+    
     let bot: Sword
     
     var cooldowns: [Snowflake : Date] = [:]
@@ -67,7 +69,6 @@ import Foundation
     }
     
     static func main() {
-        let theBot = SwiftyBot()
-        theBot.bot.connect()
+        shared.bot.connect()
     }
 }
