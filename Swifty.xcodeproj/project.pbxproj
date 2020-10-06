@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1244DB09252A6D6800DA69F1 /* UserCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommand.swift; sourceTree = "<group>"; };
+		1244DB09252A6D6800DA69F1 /* UserCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommand.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		125ABA2D2529DCB8003813DD /* Swifty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swifty; sourceTree = BUILT_PRODUCTS_DIR; };
 		125ABA302529DCB8003813DD /* SwiftyBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBot.swift; sourceTree = "<group>"; };
 		125ABA422529F6AA003813DD /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };

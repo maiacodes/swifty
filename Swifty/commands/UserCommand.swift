@@ -45,13 +45,11 @@ extension Command {
            let username = user?.username,
            let discrim = user?.discriminator {
                 let iconURL = "https://cdn.discordapp.com/avatars/\(id)/\(hash).webp?size=256"
-                profileEmbed.author = Embed.Author(iconUrl: iconURL, name: "\(username)#\(discrim)")
+                let headerURL = "https://discordapp.com/users/\(id)"
+                profileEmbed.author = Embed.Author(iconUrl: iconURL, name: "\(username)#\(discrim)", url: headerURL)
+                profileEmbed.addField("User ID", value: "\(id)", isInline: true)
         }
         
-        // Create fields
-        if let id = user?.id {
-            profileEmbed.addField("User ID", value: "\(id)", isInline: true)
-        }
         profileEmbed.addField("Entitlement", value: "Contributor", isInline: true)
         
         // Send
